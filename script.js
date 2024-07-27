@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const group1 = document.getElementById('media-group-1');
     const group2 = document.getElementById('media-group-2');
     const group3 = document.getElementById('media-group-3');
-    const group4 = document.getElementById('media-group-3');
 
     items.forEach((item, index) => {
         const div = document.createElement('div');
