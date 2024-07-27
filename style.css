@@ -1,5 +1,20 @@
 .navbar {
     border-bottom: 1px solid white;  
+} 
+
+.pointer{
+    cursor: pointer;
+} 
+
+.font-title{
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+} 
+.text-gold{
+    color: #dcb971;
+} 
+.text-gold:hover{
+    color: #bc9c5b;
 }
 
 .navbar-brand img {
@@ -30,13 +45,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
 }
 
 .media-group {
     display: flex;
-    gap: 20px; 
+    gap: 60px;  
     justify-content: center;
+    margin-top: 20px;
     width: 100%;
 }
 
