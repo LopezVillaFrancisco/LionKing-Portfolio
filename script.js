@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     const items = [
-        { type: 'video', src: 'videos/video jaime bueno.mp4' },
-        { type: 'video', src: 'videos/Video Jaime 1 prueba (1).mp4' },
-        { type: 'video', src: 'videos/IMG_6688_1.mp4' },
-        { type: 'video', src: 'videos/IMG_7452_2.mp4' },
-        { type: 'video', src: 'videos/IMG_5288_2.mp4' },
-        { type: 'video', src: 'videos/Revisa.mp4' },
-        { type: 'video', src: 'videos/3.mp4' },
-        { type: 'video', src: 'videos/dia 2 reto contenido.mp4' }, 
-        { type: 'video', src: 'videos/cuestion de animarse.mp4' },
-        { type: 'video', src: 'videos/Vi la oportunidad.mp4' },
+        { type: 'video', src: 'videos/video jaime bueno.mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.29.18 p. m..png' },
+        { type: 'video', src: 'videos/Video Jaime 1 prueba (1).mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.29.38 p. m..png' },
+        { type: 'video', src: 'videos/IMG_6688_1.mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.30.14 p. m..png' },
+        { type: 'video', src: 'videos/IMG_7452_2.mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.30.23 p. m..png' },
+        { type: 'video', src: 'videos/IMG_5288_2.mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.30.34 p. m..png' },
+        { type: 'video', src: 'videos/Revisa.mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.30.43 p. m..png' },
+        { type: 'video', src: 'videos/3.mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.30.52 p. m..png' },
+        { type: 'video', src: 'videos/dia 2 reto contenido.mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.31.24 p. m..png' },
+        { type: 'video', src: 'videos/cuestion de animarse.mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.31.36 p. m..png' },
+        { type: 'video', src: 'videos/Vi la oportunidad.mp4', poster: 'portadas/Captura de pantalla 2024-07-27 a la(s) 8.31.46 p. m..png' },
     ];
 
     const group1 = document.getElementById('media-group-1');
@@ -23,23 +23,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (item.type === 'video') {
             div.classList.add('video-item');
-            div.innerHTML = `<video controls>
-                                <source src="${item.src}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>`;
+            div.innerHTML = `
+                <div class="video-wrapper">
+                    <video controls poster="${item.poster}">
+                        <source src="${item.src}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay"></div>
+                </div>`;
         } else if (item.type === 'cover') {
             div.classList.add('cover-item');
-            div.innerHTML = `
-            <img src="${item.src}" alt="Cover">`;
+            div.innerHTML = `<img src="${item.src}" alt="Cover">`;
         }
 
-        if (index < 2 ) {
+        if (index < 2) {
             group1.appendChild(div);
-        } else if (index < 5 ) {
+        } else if (index < 5) {
             group2.appendChild(div);
-        }else if (index < 8) {
+        } else if (index < 8) {
             group3.appendChild(div);
-        }else{
+        } else {
             group4.appendChild(div);
         }
     });
