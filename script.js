@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     items.forEach((item, index) => {
         const div = document.createElement('div');
         div.classList.add('media-item');
+        div.setAttribute('data-aos', 'fade-up');
 
         if (item.type === 'video') {
             div.classList.add('video-item');
@@ -45,5 +46,11 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             group4.appendChild(div);
         }
+    });
+
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-in-out',
+        once: true
     });
 });
